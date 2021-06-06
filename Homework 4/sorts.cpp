@@ -256,7 +256,7 @@ void sortUsingPtrs(vector<Student>& students, bool comp(const Student*, const St
         *it = &auxStudents[i];
         it++;
     }
-    sort(studentPtrs.begin(),studentPtrs.end(),compareStudentPtr);
+    sort(studentPtrs.begin(),studentPtrs.end(),comp);
     for (int i = 0; i != students.size(); i++)
     {
         students[i] = *studentPtrs[i];
